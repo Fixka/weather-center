@@ -7,6 +7,7 @@ import AircraftData from './components/AircraftData';
 import ProceduresCenter from './components/ProceduresCenter';
 import FlightCalculators from './components/FlightCalculators';
 import EmergencyRef from './components/EmergencyRef';
+import UTCClock from './components/UTCClock';
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -56,10 +57,7 @@ function App() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="text-right text-sm">
-                <div className="font-medium">UTC: {new Date().toISOString().slice(0, 19).replace('T', ' ')}</div>
-                <div className="text-blue-200">Flight Safety First</div>
-              </div>
+              <UTCClock />
               <Settings className="h-6 w-6 text-blue-200 hover:text-white cursor-pointer transition-colors" />
             </div>
           </div>
